@@ -1,0 +1,15 @@
+<div id="page-wrap">
+  <div id="max-width-column" *ngIf="auth.user | async">
+      <div id="content-wrap">
+          <button routerLink="/">Home</button>
+          <button routerLink="/contacts/new">Create New</button>
+          <button (click)="signInClick()">Sign Out</button>
+          
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+  <div id="max-width-column" *ngIf="!(auth.user | async)">
+      <h3>You need to sign in to view this page</h3>
+      <button (click)="signInClick()">Sign In</button>
+  </div>
+</div>

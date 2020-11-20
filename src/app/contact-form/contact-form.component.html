@@ -1,0 +1,15 @@
+<form (ngSubmit)="onButtonClicked()">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" [(ngModel)]="this.contact.name" />
+    </div>
+    <div>
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" [(ngModel)]="this.contact.address" />
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="text" [(ngModel)]="this.contact.phone" />
+    </div>
+    <button type="submit">{{buttonText}}</button>
+</form>

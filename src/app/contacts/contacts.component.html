@@ -1,0 +1,7 @@
+<div>
+    <div class="content-box" *ngFor="let contact of contacts">
+        <a routerLink="/contacts/{{contact.id}}">
+            <h3>{{contact.name}} - {{contact.phone}}</h3>
+        </a>
+    </div>
+</div>
